@@ -1,0 +1,249 @@
+/* Shamelessly stolen (then modified) from https://github.com/soft-aesthetic */
+
+@font-face {
+  font-family: "Select Mono";
+  src: url('https://cdn.glitch.com/98e506f2-82b2-4123-8d7f-c82f8b52959e%2FSelectMono-Italic.woff?1524183186236') format('woff');
+}
+
+html {
+  font-size: 0.625rem;
+  /* 10px equivalent thanks to default of 16px */
+}
+  html * {
+    box-sizing: border-box;
+  }
+
+body {
+  background: #cfc9f4;
+  color: #414141;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.6rem;
+  /* 16px equivalent */
+  font-weight: 400;
+  padding: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* color: #000000; */
+  font-family: "Select Mono", cursive;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Select Mono";
+  margin-bottom: 3.6rem;
+}
+
+hr {
+  margin: 6rem 0;
+  border: none;
+  border-top: .6rem solid #eae5f0;
+  background: none;
+  height: 0; }
+
+
+a {
+  border-bottom: .2rem solid transparent;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s ease all; }
+
+a:hover {
+  border-bottom-color: inherit;
+  transition: .1s ease all;
+}
+
+  /* form fields */
+  input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #e5e5e5;
+    padding: .8rem; }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: pink;
+      z-index: 100; }
+
+  button, input[type="button"], input[type="submit"],
+  .btn-link {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    border: .2rem solid;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 600;
+    padding: .6em 1.2em .8em 1.2em;
+    text-align: center;
+    transition: .3s ease all;
+  }
+    button.primary, input[type="button"].primary, input[type="submit"].primary,
+    .btn-link.primary {
+      color: #2328ff; }
+    button:hover, input[type="button"]:hover, input[type="submit"]:hover,
+    .btn-link:hover {
+      color: #fff;
+      background: #000;
+      border-color: #000; }
+    button:active, input[type="button"]:active, input[type="submit"]:active,
+    .btn-link:active {
+      color: #fff;
+      background: #000;
+      transform: translateY(.4rem);
+      transition: 0s ease all; }
+    button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled,
+    .btn-link:disabled {
+      color: #bbb;
+      background: #f0f0f0;
+      border-color: #f0f0f0; }
+      button:disabled:hover, input[type="button"]:disabled:hover, input[type="submit"]:disabled:hover,
+      .btn-link:disabled:hover {
+        cursor: default; }
+    button:focus, input[type="button"]:focus, input[type="submit"]:focus,
+    .btn-link:focus {
+      outline: 2px solid pink;
+      z-index: 100; }
+
+  .btn-link:not([href]) {
+    background: transparent;
+    border-color: transparent;
+    color: #9c9b9b; }
+
+
+
+
+  header {
+    margin-bottom: 4rem;
+  }
+
+  main {
+    margin: 2rem auto;
+    max-width: 110rem;
+  }
+
+  footer {
+    /* margin: 6rem auto; */
+  }
+
+
+.title-emoji {
+  font-size: 1.4em;
+}
+
+.theme-link {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+    .theme-link::after {
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 1);
+      bottom: 0;
+      color: #fff;
+      content: "view theme";
+      display: block;
+      opacity: 0;
+      padding: 1rem 2rem;
+      position: absolute;
+      width: 100%;
+      z-index: 200;
+    }
+    .theme-link:hover {
+      /* box-shadow: -2rem 2.2rem .2rem .15rem #f6f0f4; */
+    }
+        .theme-link:hover::after {
+          opacity: 1;
+          transition: .2s ease all;
+        }
+  .theme-link-description {
+    padding: 2rem 4rem;
+  }
+    .theme-link h3 {
+      font-family: "Select Mono", cursive;
+      font-size: 3rem;
+      margin: 1rem 0 0 0;
+    }
+  .theme-thumbnail-wrapper {
+    overflow: hidden;
+    width: 100%;
+    max-height: 22rem;
+  }
+    .theme-thumbnail {
+      display: block;
+      position: relative;
+      width: 250%;
+    }
+
+
+.theme-page-soft-era {
+  background: #f9f5f5;
+  color: #c3adad;
+}
+  .theme-page-soft-era h1 {
+    color: #414141;
+  }
+    .theme-page-soft-era a {
+      color: #a29acb;
+      /* color: #25b7b8; */
+    }
+    .theme-page-soft-era .btn-link {
+      /* color: #a29acb; */
+      color: #25b7b8;
+      border-radius: 1rem;
+    }
+    .theme-page-soft-era .btn-link:hover {
+      color: #fff;
+    }
+
+.theme-preview {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+
+
+    @media only screen and (min-width: 50em) {
+
+
+      body {
+        font-size: 2rem;
+        padding: 8rem 10rem;
+      }
+
+      /* column alignment on larger screens */
+      header, footer, main > section {
+        max-width: 66%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      hr {
+        margin: 9.4rem 0;
+      }
+
+      header {
+        margin-bottom: 6rem;
+      }
+
+      .theme-link-description {
+        padding: 4rem 4rem;
+      }
+        .theme-link h3 {
+          font-size: 4rem;
+        }
+      .theme-thumbnail-wrapper {
+        max-height: 36rem;
+      }
+        .theme-thumbnail {
+          width: 100%;
+        }
+
+
+    }
