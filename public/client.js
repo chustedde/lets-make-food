@@ -4,21 +4,6 @@
 (function(){
   console.log('hello world :o');
   
-  // Get a random food emoji
-  // http://www.unicode.org/emoji/charts/full-emoji-list.html#food_&_drink
-  const getFoodmoji = function() {
-    var min = 127815;
-    var max = 127855;
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
-  
-  // Turn all title-emoji elements into random food emoji
-  var titleDecoration = document.getElementsByClassName('title-emoji');
-  for (var i = 0; i < titleDecoration.length; i++) {
-    titleDecoration.item(i).innerHTML = '&#' + getFoodmoji() + ';';
-  }
-  
-  
   let dreams = [];
   
   // define variables that reference elements on our page
